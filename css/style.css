@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+header {
+    min-height: 60px;
+    border: 1px dashed black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-links {
+    display: flex;
+}
+.img-links > img {
+    width: 100px;
+    object-fit: contain;
+    padding-left: 10px;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    padding-left: 20px;
+}
+ul a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(144, 134, 134);
+}
+
+
+
+/* main */
+.main-header {
+    min-height: 400px;
+    border: 1px dashed black;
+}
+
+.section-1 {
+    min-height: 800px;
+    width: 50%;
+    border: 1px dashed black;
+    margin: 0 auto;
+}
+
+.section-2 {
+    min-height: 300px;
+    width: 50%;
+    border: 1px dashed black;
+    margin: 0 auto;
+}
+
+.section-3 {
+    min-height: 500px;
+    width: 50%;
+    border: 1px dashed black;
+    margin: 0 auto;
+}
+
+.section-4 {
+    min-height: 140px;
+    width: 50%;
+    border: 1px dashed black;
+    margin: 0 auto;
+}
+
+.section-5 {
+    min-height: 350px;
+    border: 1px dashed black;
+}
+
+.section-6 {
+    min-height: 200px;
+    border: 1px dashed black;
+}
+
+.section-7 {
+    min-height: 300px;
+    width: 50%;
+    margin: 0 auto;
+    border: 1px dashed black;
+}
+
+/* footer */
+
+footer {
+    min-height: 200px;
+    background-color: black;
+}
