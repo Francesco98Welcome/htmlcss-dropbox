@@ -4,14 +4,23 @@
     box-sizing: border-box;
     font-family: 'Noto Sans', sans-serif;
 }
+button:hover {
+    cursor: pointer;
+}
+
 
 /* header */
-header {
-    min-height: 60px;
-    border: 1px dashed black;
+#real-header {
+    min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    z-index: 30;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
 }
 .img-links {
     display: flex;
@@ -20,6 +29,9 @@ header {
     width: 110px;
     object-fit: contain;
     padding-left: 10px;
+}
+.img-links:hover {
+    cursor: pointer;
 }
 ul {
     list-style-type: none;
@@ -39,30 +51,64 @@ ul a {
 }
 
 
-
 /* main */
+main {
+    margin-top: 70px;
+}
+
+/* main-header */
 .main-header {
-    min-height: 500px;
-    border: 1px dashed black;
+    min-height: 420px;
     background-color: #b4d0e7;
+    padding-top: 40px;
 }
 .container-main-header {
-    width: 60%;
-    min-height: 400px;
-    border: 1px solid black;
+    width: 70%;
+    min-height: 450px;
     margin: 0 auto;
 }
 .container-main-header > h1 {
-    font-size: 52px;
+    font-size: 63px;
 }
+.txt-img-main-header {
+    display: flex;
+    margin-top: 20px;
+}
+
+.txt-img-main-header > div:first-child {
+    width: 40%;
+}
+.txt-img-main-header > div:first-child > button {
+    padding: 8px 13px;;
+    background-color: #0061ff;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.txt-img-main-header > div:first-child > i {
+    margin-top: 50px;
+    padding-left: 6px;
+    font-size: 30px;
+}
+.txt-img-main-header > div:last-child {
+    width: 80%;
+    background-image: url('../img/jumbo.png');
+    background-size: cover;
+    margin-bottom: -70px;
+}
+
 
 
 /* section 1 */
 .section-1 {
     min-height: 800px;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 120px;
+}
+.title-contenuto {
+    height: 200px;
 }
 .section-1 > h2 {
     font-size: 25px;
@@ -74,14 +120,14 @@ ul a {
 }
 .container-section-1 > div {
     border: 1px solid lightgray;
-    width: 210px;
+    width: 260px;
     height: 750px;
 }
 .user, .team, .azienda {
     text-align: center;
     border-bottom: 1px solid lightgray;
     padding: 10px;
-    width: 209px;
+    width: 100%;
     font-size: 14px;
 }
 .contenuto-icon-text-sec {
@@ -93,16 +139,27 @@ ul a {
 .contenuto-icon-text-sec > div {
     margin-top: 20px;
 }
-.contenuto-icon-text-sec > div > h5 {
+.contenuto-icon-text-sec > .title-contenuto > div > h5 {
     font-size: 20px;
 }
-.contenuto-icon-text-sec > div > h6 {
+.contenuto-icon-text-sec > .title-contenuto > div > h6 {
     font-size: 14px;
     margin-top: 10px;
 }
-.contenuto-icon-text-sec > div:first-child > p {
+.contenuto-icon-text-sec > .title-contenuto > div:first-child > p {
     margin-top: 6px;
     color: rgb(166, 153, 153);
+}
+
+.icons .icons-text {
+    display: flex;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.icons .icons-text > div:last-child {
+    font-size: 13px;
+    padding-left: 10px;
 }
 .icons > i {
     padding-top: 14px;
@@ -117,10 +174,11 @@ ul a {
     background-color: #0061ff;
     color: white;
     border: none;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 }
+
 .contenuto-icon-text-sec > .button-link {
-    margin-top: 30px;
+    margin-top: 60px;
     font-size: 14px;
     margin-bottom: 30px;
 }
@@ -142,19 +200,46 @@ ul a {
     color: #0061ff;
 }
 
-
 .enterprise {
-    border: 1px solid black;
+    border: 1px solid lightgray;
     margin-top: 20px;
-    width: 685px;
-    height: 150px;
+    width: 100%;
+    height: 200px;
 }
+.enterprise-container {
+    display: flex;
+}
+.enterprise-container > div:first-child {
+    padding: 20px;
+}
+.enterprise-container > div:first-child > h3 {
+    margin-bottom: 18px;
+}
+.enterprise-container > div:first-child > h5 {
+    margin-bottom: 20px;
+}
+.enterprise-container > div:first-child > p {
+    font-size: 12px;
+}
+.enterprise-container > div:last-child {
+    flex-grow: 1;
+    text-align: end;
+    padding: 20px 12px;
+}
+.enterprise-container > div:last-child > button {
+    width: 90%;
+    padding: 8px 0px;;
+    background-color: #0061ff;
+    color: white;
+    border: none;
+}
+
 
 
 /* section 2 */
 .section-2 {
     min-height: 300px;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 100px;
 }
@@ -174,7 +259,7 @@ ul a {
     flex-grow: 1;
 }
 .text-sec2 {
-    padding: 30px;
+    padding: 50px;
 }
 .text-sec2 p {
     margin-top: 16px;
@@ -188,10 +273,11 @@ ul a {
 }
 
 
+
 /* section 3 */
 .section-3 {
     min-height: 700px;
-    width: 50%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 70px;
 }
@@ -220,14 +306,16 @@ ul a {
     font-size: 13px;
 }
 
+
+
 /* section 4 */
 .section-4 {
     min-height: 200px;
-    width: 50%;
-    border: 1px dashed black;
+    width: 60%;
     margin: 0 auto;
     margin-top: 40px;
     padding-top: 50px;
+    padding-bottom: 100px;
 }
 .section-4 > h2 {
     margin-bottom: 40px;
@@ -236,58 +324,175 @@ ul a {
     color: #0061ff;
 }
 
+
+
 /* section 5 */
 .section-5 {
-    min-height: 350px;
-    border: 1px dashed black;
+    display: flex;
+    justify-content: space-between;
+}
+.box-sec5 {
+    width: calc(100%/3);
+    height: calc(100vw/3);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.box-sec5 > div {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box-sec5 > div > img {
+    width: 50%;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(46deg) brightness(104%) contrast(104%); 
+}
+#box-sec-5-img-text {
+    width: 35%;
+    background-color: #f5f5f5;
+}
+.container-sec-5-img-text {
+    padding: 30px;
+    margin: 30px 30px;
+    background-image: url(../img/designit.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
+.barra-sec5 {
+    border: 1px solid lightgray;
+    width: 60px;
+    margin-left: 30px;
+}
+
+.text-sec-5 {
+    margin: 30px 30px;
+    font-size: 13px;
+}
+
+.text-sec-5-final {
+    margin: 30px 30px;
+    font-size: 13px;
+}
+
+
+
+/* regole colore sfondo box */
+.verde {
+    background-color: #a2d39b;
+}
+.amaranto {
+    background-color: #61082b;
+}
+.celeste {
+    background-color: #0093ce;
+}
+.rosso {
+    background-color: #ff1c1c;
+}
+.celeste-chiaro {
+    background-color: #b4d0e7;
+}
+.blu {
+    background-color: #0d2481;
+}
+.giallo {
+    background-color: #ffd830;
+}
+
+
+
+/* section 6 */
 .section-6 {
     min-height: 200px;
-    border: 1px dashed black;
     background-color: #b4d0e7;
 }
 .container-section-6 {
     display: flex;
-    width: 50%;
+    width: 60%;
     height: 200px;
     margin: 0 auto;
-    border: 1px dashed black;
     align-items: center;
     justify-content: space-between;
     color: #61082b;
 }
 .container-section-6 > div > button {
     width: 200px;
-    padding: 6px 10px;
+    padding: 6px 14px;
     background-color: white;
     border: none;
 }
 
+
+
+/* section 7 */
 .section-7 {
     min-height: 300px;
-    width: 50%;
+    width: 60%;
+    padding-top: 100px;
+    padding-bottom: 100px;
     margin: 0 auto;
-    border: 1px dashed black;
+}
+.container-section-7 {
+    width: 100%;
+    margin-top: 20px;
+}
+.section-7 > h2 {
+    margin-bottom: 40px;
+}
+.container-section-7 > div {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icons-sec7 {
+    padding-right: 16px;
+}
+.icons-sec7:hover {
+    cursor: pointer;
 }
 
-/* footer */
 
+
+/* footer */
 footer {
     min-height: 370px;
     background-color: black;
     padding-top: 50px;
+    color: white;
 }
 .container-footer {
     margin-top: 50px;
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
-    border: 1px dashed white;
     height: 230px;
     display: flex;
+    justify-content: space-between;
+}
+.container-footer > div > h3 {
+    margin-bottom: 30px;
+}
+.container-footer > div > p {
+    font-size: 12px;
+    line-height: 25px;
 }
 .container-footer > div {
-    width: 200px;
     height: 230px;
-    border: 1px dashed white;
+    padding-top: 20px;
+}
+.barra-bianca {
+    border: 0.5px solid white;
+    width: 90px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.container-footer > div > span {
+    color: white;
+    padding-top: 20px;
+    font-size: 12px;
 }
